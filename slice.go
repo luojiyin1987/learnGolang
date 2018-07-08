@@ -2,22 +2,17 @@ package main
 
 import "fmt"
 
-func max(a, b int) int {
-	if a > b {
-		return a
-	}
-	return b
+func add1(a *int) int {
+	*a = *a + 1
+	return *a
 }
 
 func main() {
 	x := 3
-	y := 4
-	z := 5
 
-	max_xy := max(x, y)
-	max_xz := max(x, z)
+	fmt.Println("x = ", x)
+	x1 := add1(&x)
 
-	fmt.Printf("max(%d, %d) = %d\n", x, y, max_xy)
-	fmt.Printf("max(%d, %d) = %d\n", x, z, max_xz)
-	fmt.Printf("max(%d, %d) = %d\n", y, z, max(y, z))
+	fmt.Println("x+1 = ", x1)
+	fmt.Println("x = ", x)
 }
