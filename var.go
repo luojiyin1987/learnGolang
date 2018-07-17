@@ -11,6 +11,6 @@ func main() {
 func n() { print(a) }
 
 func m() {
-	a := 0
+	a = "0"
 	print(a)
 }
