@@ -1,16 +1,19 @@
 package main
 
-var a = "G"
+var a string
 
 func main() {
-	n()
-	m()
-	n()
+	a = "G"
+	print(a)
+	f1()
 }
 
-func n() { print(a) }
+func f1() {
+	a := 0
+	print(a)
+	f2()
+}
 
-func m() {
-	a = "0"
+func f2() {
 	print(a)
 }
