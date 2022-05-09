@@ -36,3 +36,11 @@ func Shuffle(arrary []string) []string {
 	}
 	fmt.Println("Shuffle array:", arrary)
 }
+
+func ReverseSlice(s []string) []string {
+	for i := len(s)/2 - 1; i >= 0; i-- {
+		pos := len(s) - 1 - i
+		s[i], s[pos] = s[pos], s[i]
+	}
+	return s
+}
