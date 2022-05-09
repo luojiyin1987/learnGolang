@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"strconv"
+	"strings"
 	"time"
 )
 
@@ -51,4 +53,12 @@ func sumSlice(s []int) int {
 		sum += item
 	}
 	return sum
+}
+
+func ConvertSliceToString(input []int) string {
+	var output []string
+	for _, item := range input {
+		output = append(output, strconv.Itoa(item))
+	}
+	return strings.Join(output, ",")
 }
