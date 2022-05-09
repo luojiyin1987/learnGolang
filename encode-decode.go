@@ -44,3 +44,11 @@ func ReverseSlice(s []string) []string {
 	}
 	return s
 }
+
+func sumSlice(s []int) int {
+	sum := 0
+	for _, item := range s {
+		sum += item
+	}
+	return sum
+}
