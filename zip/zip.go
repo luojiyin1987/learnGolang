@@ -2,6 +2,8 @@ package main
 
 import (
 	"archive/zip"
+	"flag"
+	"fmt"
 	"io"
 	"log"
 	"os"
@@ -58,7 +60,14 @@ func zipSource(source, target string) error {
 }
 
 func main() {
-	if err := zipSource("testFloder", "test.zip"); err != nil {
+
+	source := flag.String("s", "", "source file or directory")
+	target := flag.String("t", "", "target name")
+	flag.Parse()
+
+	fmt.Println("arg", flag.Args())
+
+	if err := zipSource(*source, *target); err != nil {
 		log.Fatal(err)
 	}
 }
