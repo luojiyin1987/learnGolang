@@ -2,7 +2,7 @@ package main
 
 type Stack []byte
 
-func (s *Stack) IsEmpy() bool {
+func (s *Stack) IsEmpty() bool {
 	return len(*s) == 0
 }
 
@@ -11,7 +11,7 @@ func (s *Stack) Push(c byte) {
 }
 
 func (s *Stack) Pop() (byte, bool) {
-	if s.IsEmpy() {
+	if s.IsEmpty() {
 		return 0, false
 	}
 
